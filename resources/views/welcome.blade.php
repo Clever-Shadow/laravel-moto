@@ -90,7 +90,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-				 <p><img src="img/izh1.jpg" alt="ИЖ-1"></p>
+				 <p><img src="../views/img/izh1.jpg" alt="ИЖ-1"></p>
             </div>
         </div>
     </body>
