@@ -77,7 +77,7 @@
                 @endauth
             </div>
         @endif
-		</div>
 	    {!! $map['html'] !!}
+		</div>
     </body>
 </html>
