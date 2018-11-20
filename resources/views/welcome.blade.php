@@ -11,7 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <style>
+		
+        <!--<style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -62,11 +63,12 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>
+        </style>-->
 		{!! $map['js'] !!}
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+	    {!! $map['html'] !!}
+        <!--<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -91,9 +93,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-				 <p><img src="https://avatars.mds.yandex.net/get-pdb/51720/2f177da2-f0a4-422f-b7ce-634e1f4abceb/orig" alt="ИЖ-1"></p>
-                {!! $map['html'] !!}
 			</div>
-        </div>
+        </div>-->
     </body>
 </html>
