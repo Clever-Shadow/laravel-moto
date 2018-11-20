@@ -12,14 +12,16 @@
 */
 
 Route::get('/', function () {
-	$config = array();
     $config['center'] = 'New York, USA';
-    GMaps::initialize($config);
-    $map = GMaps::create_map();
+	$config['zoom'] = '14';
+    $config['map_height'] = '500px';
+	$config['scroolwheel'] = false;
 
-    echo $map['js'];
-    echo $map['html'];
-    //return view('welcome');
+	GMaps::initialize($config);
+	
+	$map = GMaps::create_map();
+	
+    return view('welcome')->with('map');
 });
 
 Auth::routes();
