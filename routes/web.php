@@ -12,16 +12,16 @@
 */
 
 Route::get('/', function () {
-    $config['center'] = 'New York, USA';
+    $config['center'] = 'Air Canada Centre, Toronto';
 	$config['zoom'] = '14';
     $config['map_height'] = '500px';
-	$config['scroolwheel'] = false;
+	$config['scrollwheel'] = false;
 
 	GMaps::initialize($config);
 	
 	$map = GMaps::create_map();
 	
-    return view('welcome')->with('map');
+    return view('welcome')->with('map', $map);
 });
 
 Auth::routes();
