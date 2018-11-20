@@ -63,6 +63,7 @@
                 margin-bottom: 30px;
             }
         </style>
+		{!! $map['js'] !!}
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -91,7 +92,8 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
 				 <p><img src="https://avatars.mds.yandex.net/get-pdb/51720/2f177da2-f0a4-422f-b7ce-634e1f4abceb/orig" alt="ИЖ-1"></p>
-            </div>
+                {!! $map['html'] !!}
+			</div>
         </div>
     </body>
 </html>

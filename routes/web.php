@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$config = array();
+    $config['center'] = 'New York, USA';
+    GMaps::initialize($config);
+    $map = GMaps::create_map();
+
+    echo $map['js'];
+    echo $map['html'];
+    //return view('welcome');
 });
 
 Auth::routes();
