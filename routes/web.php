@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    $config['center'] = 'Air Canada Centre, Toronto';
+    $config['center'] = '54.9884804, 73.3242361';
 	$config['zoom'] = '14';
     $config['map_height'] = '500px';
 	$config['scrollwheel'] = false;
