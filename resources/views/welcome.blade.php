@@ -9,10 +9,10 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+		{!! $map['js'] !!}
         <!-- Styles -->
 		
-        <!--<style>
+        <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -63,8 +63,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>-->
-		{!! $map['js'] !!}
+        </style>
     </head>
     <body>
 	    {!! $map['html'] !!}
