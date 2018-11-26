@@ -77,16 +77,6 @@
                 @endauth
             </div>
         @endif
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offseto2">
-					<div class="panel">
-						@component('components.who')
-						@endcomponent
-					</div>
-				</div>
-			</div>
-		</div>
 	    {!! $map['html'] !!}
 		</div>
     </body>

@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    @component('components.who')
-					@endcomponent
+                    You are logged in as <strong>ADMIN</strong>
                 </div>
             </div>
         </div>
