@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-			{!! $map['html'] !!}
         </div>
+			{!! $map['html'] !!}
     </body>
 </html>
