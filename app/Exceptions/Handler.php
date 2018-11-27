@@ -40,7 +40,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        /*if ($request->expectsJson()){
+        if ($request->expectsJson()){
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
         $guard = array_get($exception->guards(), 0);
@@ -53,6 +53,6 @@ class Handler extends ExceptionHandler
             break;
         }
         //return redirect()->guest(route $login));
-        return parent::render($request, $exception);*/
+        return parent::render($request, $exception);
     }
 }
