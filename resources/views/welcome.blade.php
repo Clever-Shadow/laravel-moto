@@ -66,10 +66,10 @@
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
+						<a href="/form">Feedback</a>
                     @endauth
                 </div>
             @endif
-
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">

@@ -24,6 +24,11 @@ Route::get('/', function () {
     return view('welcome')->with('map', $map);
 });
 
+Route::get('/form', function () {
+	return view('form');
+});
+
+Route::post('/send-mail', 'MailSetting@send_form');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/logout','Auth/LoginController@userLogout')->name('user.logout');
