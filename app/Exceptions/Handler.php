@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Exceptions;
-
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-
 class Handler extends ExceptionHandler
 {
-/**
+    /**
      * A list of the exception types that are not reported.
      *
      * @var array
@@ -43,7 +40,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if ($request->expectsJson()){
+        /*if ($request->expectsJson()){
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
         $guard = array_get($exception->guards(), 0);
@@ -51,11 +48,11 @@ class Handler extends ExceptionHandler
             case 'admin':
                 $login = 'admin.login';
             break;
-			
             default:
                 $login = 'login';
             break;
         }
-        return redirect()->guest(route($login));
+        //return redirect()->guest(route $login));
+        return parent::render($request, $exception);*/
     }
 }
