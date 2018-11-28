@@ -1,0 +1,103 @@
+﻿/* Для формы----------------------------------------------------------*/
+form{
+	margin:70px auto;
+	max-width:30%;
+	box-sizing:border-box;
+	padding:40px;
+	border-radius:5px; 
+	background:RGBA(255,255,255,1);
+	-webkit-box-shadow:  0px 0px 15px 0px rgba(255, 145, 0, 1);        
+	box-shadow:  0px 0px 15px 0px rgba(255, 145, 0, 1); 
+	text-align:center;
+}
+/*-----------------------------------------------------------------------*/
+/* Стили полей ввода */
+.textbox{
+	width: 70%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+	border-radius:5px;
+    background-color: #f8f8f8;
+	box-shadow:  0px 0px 15px 0px #80b438; 
+    resize: none;
+}
+/*-----------------------------------------------------------------------*/
+/*Кнопка*/
+.button{
+  height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 0px solid;
+  box-sizing:border-box;
+  padding:10px;
+  background:#90c843;
+  color:#FFF;
+  font-family: 'Open Sans', sans-serif;  
+  font-weight:400;
+  font-size: 16pt;
+  transition:background .4s;
+  cursor:pointer;
+}
+/* Изменение фона кнопки при наведении */
+.button:hover{
+  background:#80b438;
+}
+/*----------------------------------------------------------------------------------------*/
+/*Для красивой надписи*/
+html, body {
+  background-color: #efefef;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#text {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 4em;
+  line-height: 1em;
+  text-align: center;
+  position: relative;
+  top: 7%;
+  transform: translateY(-50%);
+}
+#text:hover {
+  cursor: default;
+}
+#text .wrapper {
+  display: inline-block;
+  top: -900px;
+  position: relative;
+  height: 150px;
+  /* default */
+  width: 90px;
+  /* default */
+  transition: ease 0.3s all;
+}
+#text .wrapper span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: ease 0.3s all;
+}
+#text .wrapper span.letter-2 {
+  color: rgba(255, 145, 0, 1);
+}
+#text .wrapper span.letter-1 {
+  color: #80b438;
+  z-index: 1;
+}
+#text .wrapper span.letter-1:hover {
+  top: -3px;
+  right: -3px;
+}
+#text .wrapper span.letter-1:hover ~ .letter-2 {
+  top: 3px;
+  right: 3px;
+}
+#text .wrapper span.space {
+  padding: 0;
+  min-width: 30px;
+  display: inline-block;
+}
+/*-----------------------------------------------------------------------*/
