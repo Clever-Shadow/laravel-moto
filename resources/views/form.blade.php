@@ -21,6 +21,7 @@
 			<p>{{ Form::textarea('msg', '', ['class'=>'textbox', 'placeholder'=>'Your message...']) }}</p>
 			{{ Form::submit('Send', ['class'=>'button']) }}
 		{!! Form::close() !!}
+		<img src='https://media.giphy.com/media/PkXuh8TFTlBRK/giphy.gif'>
 		<script src="js/scripts.js"></script>
     </body>
 </html>
