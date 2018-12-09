@@ -28,6 +28,10 @@ Route::get('/form', function () {
 	return view('form');
 });
 
+Route::get('/chat', function () {
+	return view('chat');
+});
+
 Route::post('/send-mail', 'MailSetting@send_form');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
