@@ -13,7 +13,11 @@ class MailSetting extends Controller
 		$email = $request->email;
 		$msg = $request->msg;
 		
+		
 		Mail::to('pocht@gmail.com')->send(new MailClass($name, $email, $msg));
-		return redirect('/');
+		
+		\Session::flash('flash_message','Успешно отправлено!');
+		
+		return redirect('/home');
 	}
 }

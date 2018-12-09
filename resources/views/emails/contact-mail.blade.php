@@ -15,8 +15,8 @@
     </head>
     <body>
 		<h1>Привет!</h1>
-		<p>Имя: {{ $name }}</p>
-		<p>Почта: {{ $email }}</p>
+		<p>Имя: {{ Auth::user()->name }}</p>
+		<p>Почта: {{ Auth::user()->email }}</p>
 		<p>Сообщение: {{ $msg }}</p>
     </body>
 </html>
