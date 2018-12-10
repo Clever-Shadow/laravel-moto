@@ -57,7 +57,7 @@
 										</div>
 										<div class="form-group">
 										  <!-- <label for="description">Красткое описание</label> -->
-										  <textarea name="description" type="text"class="form-control" placeholder="Красткое описание">{{old('descrption')}}</textarea>
+										  <textarea name="description" type="text"class="form-control" placeholder="Красткое описание" style="resize: none;">{{old('descrption')}}</textarea>
 										</div>
 										<div class="form-group">
 										  <label for="cover_image">Выберите заставку марки</label>
