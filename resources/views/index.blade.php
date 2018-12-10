@@ -65,5 +65,30 @@
 				</div>
 			</div>
 		</div>
+		<footer>
+			<ul>
+				<li>
+					<p class="home">Home</p>
+					<a class="logo" href="">Eвгений Лосев <i>&copy; 2018</i></a>
+				</li>
+				<li>
+					<p class="services">Services</p>
+					<ul>
+					</ul>
+				</li>
+				<li>
+					<p class="reachus">Reach us</p>
+					<ul>
+						<li><a href="https://yandex.ru/search/?lr=195&text=los.zhenia1698%40yandex.ru">Email</a></li>
+						<li><a href="https://vk.com/booooooombro">Vk</a></li>
+					</ul>
+				</li>
+				<li>
+					<p class="clients">Clients</p>
+					<ul>
+					</ul>
+				</li>
+			</ul>
+		</footer>
     </body>
 </html>
