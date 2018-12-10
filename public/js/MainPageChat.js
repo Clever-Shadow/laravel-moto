@@ -34,9 +34,9 @@ $(document).ready(function()
 {
     // Create a form for the chat. Layout.
     var html =  "<div style=\"border: 1px solid #ccc;padding:10px;\" >"
-	          + "<div id=\"WebChatFormForm\" style=\"overflow: auto; height: 500px;\"></div>"
+	          + "<div id=\"WebChatFormForm\" style=\"overflow: auto; height: 200px;\"></div>"
 		  + "<input type=\"hidden\" id=\"WebChatNameID\" style=\"margin-top:10px;\" placeholder=\"Enter your name...\"> <div id=\"answer_div\" style=\"float:right;\" ></div>"
-	          + "<textarea id = \"WebChatTextID\" placeholder = \"Send a message to online chat...\" style=\"resize: none; max-height: 100px;width: 650px;margin-top:10px;display: block;\"></textarea>"
+	          + "<textarea id = \"WebChatTextID\" placeholder = \"Send a message to online chat...\" style=\"resize: none; max-height: 100px;width: 100%;margin-top:10px;display: block;\"></textarea>"
 
                   + "<div style=\"margin-bottom: 0px;margin-top: 10px;\">"
                   +    "<input type=\"button\" style=\"width: 220px;\" onclick=\"web_send_msg();\" value=\"Send\" >"
