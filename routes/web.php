@@ -12,16 +12,16 @@
 */
 
 Route::get('/', function () {
-    $config['center'] = '54.31999998, 48.40574311';
-	$config['zoom'] = '14';
-    $config['map_height'] = '500px';
-	$config['scrollwheel'] = false;
+    //$config['center'] = '54.31999998, 48.40574311';
+	//$config['zoom'] = '14';
+    //$config['map_height'] = '500px';
+	//$config['scrollwheel'] = false;
 
-	GMaps::initialize($config);
+	//GMaps::initialize($config);
 	
-	$map = GMaps::create_map();
+	//$map = GMaps::create_map();
 	
-    return view('welcome')->with('map', $map);
+    return view('index');
 });
 
 Route::get('/form', function () {
@@ -36,7 +36,10 @@ Route::get('/moto', function () {
 	return view('createalbum');
 });
 
-Route::get('/', array('as' => 'index','uses' => 'AlbumsController@getList'));
+
+Route::post('/', array('as' => 'index','uses' => 'AlbumsController@getList'));
+Route::resource('queries', 'AlbumsController@search');
+Route::post('/', 'AlbumsController@search');
 Route::get('/createalbum', array('as' => 'create_album_form','uses' => 'AlbumsController@getForm'));
 Route::post('/createalbum', array('as' => 'create_album','uses' => 'AlbumsController@postCreate'));
 Route::get('/deletealbum/{id}', array('as' => 'delete_album','uses' => 'AlbumsController@getDelete'));

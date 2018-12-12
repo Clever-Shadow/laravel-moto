@@ -2,27 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\MessageBag;
 use Validator;
 use App\Album;
+use Request;
+use DB;
 
 class AlbumsController extends Controller
 {
     public function getList()
-  {
-      $albums = Album::with('Photos')->get();
-      return view('index')->with('albums',$albums);
-  }
+	{
+		$albums = Album::with('Photos')->get();
+		return view('index')->with('albums',$albums);
+	}
 
   public function getAlbum($id)
   {
-      $album = Album::with('Photos')->find($id);
-      $albums = Album::with('Photos')->get();
-      //dd($album);
-      return view('album', ['album'=>$album, 'albums'=>$albums]);
-      //->with('album',$album);
+		$album = Album::with('Photos')->find($id);
+		$albums = Album::with('Photos')->get();
+		return view('album', ['album'=>$album, 'albums'=>$albums]);
   }
+	
+	//public function search(Request $request)
+	//{
+	//		$query = Request::input('search');
+	//		$albums = DB::table('albums')->where('name', 'LIKE', '%' . $query . '%')->paginate(10);
+	//		return view('index', compact('albums', 'query'));
+	//}
 
   public function getForm()
   {
@@ -31,10 +37,6 @@ class AlbumsController extends Controller
 
   public function postCreate(Request $request)
   {
-      /*$rules = array(
-
-        'name' => 'required',
-        'cover_image'=>'required|image'
 
     );*/
 
@@ -42,15 +44,11 @@ class AlbumsController extends Controller
 
       $input = ['name' => null];
 
-      //Validator::make($input, $rules)->passes(); // true
-
       $validator = Validator::make($request->all(), $rules);
       if($validator->fails()){
-        // return Redirect::route('create_album_form') ;
         return redirect()->route('create_album_form')->withErrors($validator)->withInput();
       }
 
-      // $file = Input::file('cover_image');
       $file = $request->file('cover_image');
       $random_name = str_random(8);
       $destinationPath = 'albums/';
@@ -66,12 +64,12 @@ class AlbumsController extends Controller
       return redirect()->route('show_album',['id'=>$album->id]);
   }
 
-  public function getDelete($id)
-  {
-      $album = Album::find($id);
+	public function getDelete($id)
+	{
+		$album = Album::find($id);
 
-      $album->delete();
+		$album->delete();
 
-      return Redirect::route('index');
-  }
+		return Redirect::route('index');
+	}
 }

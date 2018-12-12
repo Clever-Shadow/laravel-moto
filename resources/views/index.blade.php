@@ -43,23 +43,34 @@
 			</div>
         @endif
 		<div class="header_site"></div>
+		{!! Form::open(array('rout' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
+			{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Search for a tutorial...')) !!}
+			{!! Form::submit('Search',array('class'=>'btn btn-default')) !!}
+		 {!! Form::close() !!}
+
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="panel">
 						<div class="row">
-							@foreach($albums as $album)
-								<div class="col-lg-3">
-								  <div class="thumbnail" style="height: 514px;">
-									<img alt="{{$album->name}}" src="/albums/{{$album->cover_image}}">
-									<div class="caption">
-									  <h3 style="position: absolute; bottom:240px;">{{$album->name}}</h3></br>
-									  <p style="position: absolute; top:300px;">{{$album->description}}</p></br></br>
-									  <a href="{{route('show_album', ['id'=>$album->id])}}" class="btn btn-big btn-default" style="position: absolute; bottom:20px;">Узнать больше</a>
-									</div>
-								  </div>
-								</div>
-							@endforeach
+							@if (count($albums) === 0)
+								<div class="col-lg-3" id="$album">
+									<p>Не найдено!</p>
+								</div>							
+							@elseif (count($albums) > 0)
+								@foreach($albums as $album)
+										<div class="col-lg-3" id="$album">
+											<div class="thumbnail" style="height: 514px;">
+											<img alt="{{$album->name}}" src="/albums/{{$album->cover_image}}">
+												<div class="caption">
+													<h3 style="position: absolute; bottom:240px;">{{$album->name}}</h3></br>
+													<p style="position: absolute; top:300px;">{{$album->description}}</p></br></br>
+													<a href="{{route('show_album', ['id'=>$album->id])}}" class="btn btn-big btn-default" style="position: absolute; bottom:20px;">Узнать больше</a>
+												</div>
+											</div>
+										</div>
+								@endforeach
+							@endif
 						</div>
 					</div>
 				</div>
@@ -90,5 +101,10 @@
 				</li>
 			</ul>
 		</footer>
+		<script>
+		function Changebut() {
+		 $('#butchange').text('Отправляется...'); 
+		 }
+		</script>
     </body>
 </html>
