@@ -44,8 +44,8 @@
         @endif
 		<div class="header_site"></div>
 		{!! Form::open(array('rout' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
-			{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Search for a tutorial...')) !!}
-			{!! Form::submit('Search',array('class'=>'btn btn-default')) !!}
+			{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Поиск по марке мотоциклов...')) !!}
+			{!! Form::submit('Поиск',array('class'=>'btn btn-default')) !!}
 		 {!! Form::close() !!}
 
 		<div class="container">
