@@ -101,10 +101,5 @@
 				</li>
 			</ul>
 		</footer>
-		<script>
-		function Changebut() {
-		 $('#butchange').text('Отправляется...'); 
-		 }
-		</script>
     </body>
 </html>

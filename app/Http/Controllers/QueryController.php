@@ -7,7 +7,6 @@ use DB;
 
 class QueryController extends Controller
 {
-	$albums = DB::table('albums');
     /**
      * Display a listing of the resource.
      *

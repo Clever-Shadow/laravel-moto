@@ -38,8 +38,6 @@ class AlbumsController extends Controller
   public function postCreate(Request $request)
   {
 
-    );*/
-
       $rules = ['name' => 'required', 'cover_image'=>'required|image'];
 
       $input = ['name' => null];

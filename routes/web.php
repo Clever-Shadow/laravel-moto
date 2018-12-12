@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    //$config['center'] = '54.31999998, 48.40574311';
+   // $config['center'] = '54.31999998, 48.40574311';
 	//$config['zoom'] = '14';
     //$config['map_height'] = '500px';
 	//$config['scrollwheel'] = false;
@@ -37,9 +37,9 @@ Route::get('/moto', function () {
 });
 
 
-Route::post('/', array('as' => 'index','uses' => 'AlbumsController@getList'));
-Route::resource('queries', 'AlbumsController@search');
-Route::post('/', 'AlbumsController@search');
+Route::get('/', array('as' => 'index','uses' => 'AlbumsController@getList'));
+Route::resource('queries', 'QueryController');
+Route::post('/', 'QueryController@search');
 Route::get('/createalbum', array('as' => 'create_album_form','uses' => 'AlbumsController@getForm'));
 Route::post('/createalbum', array('as' => 'create_album','uses' => 'AlbumsController@postCreate'));
 Route::get('/deletealbum/{id}', array('as' => 'delete_album','uses' => 'AlbumsController@getDelete'));
