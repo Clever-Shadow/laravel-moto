@@ -48,7 +48,7 @@
 			<div class="row" style="margin-bottom:25px;">
 				<div class="col-9">
 				{!! Form::open(array('rout' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
-					<div class="col-8">
+					<div class="col-9">
 						{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Я ищу...')) !!}
 					</div>
 					<div class="col-2">
