@@ -50,11 +50,12 @@
 					<div class="col-11">
 						{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Поиск по марке мотоциклов...')) !!}
 					</div>
-					<div class="col-1">
+					<div class="col">
 						{!! Form::submit('Поиск',array('class'=>'btn btn-default')) !!}
 					</div>
 				{!! Form::close() !!}
 			</div>
+			
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="panel">
