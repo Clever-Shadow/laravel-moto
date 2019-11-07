@@ -45,18 +45,17 @@
 		<div class="header_site"></div>
 
 		<div class="container">
-			<div class="row">
+			<div class="row" style="margin-bottom:25px;">
+				<div class="col-9">
 				{!! Form::open(array('rout' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
-					<div class="col-1">
-						{!! Form::submit('Все мото',array('class'=>'btn btn-default')) !!}
-					</div>
-					<div class="col-10">
+					<div class="col-8">
 						{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Поиск по марке мотоциклов...')) !!}
 					</div>
-					<div class="col">
-						{!! Form::submit('Поиск',array('class'=>'btn btn-default')) !!}
+					<div class="col-2">
+						{!! Form::submit('Поиск / Обновить',array('class'=>'btn btn-default')) !!}
 					</div>
 				{!! Form::close() !!}
+				</div>
 			</div>
 			
 			<div class="row">
