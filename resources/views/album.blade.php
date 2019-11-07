@@ -44,7 +44,7 @@
 					<p>{{$album->name}} - {{$album->description}}</p>
 					<div class="media">
 						<a href="{{route('add_image',array('id'=>$album->id))}}"><button type="button"class="btn btn-primary btn-large">Добавить мотоцикл</button></a>
-						<a href="{{route('delete_album',array('id'=>$album->id))}}" onclick="return confirm('Are yousure?')"><button type="button"class="btn btn-danger btn-large">Удалить всю марку</button></a>
+						<a href="{{route('delete_album',array('id'=>$album->id))}}" onclick="return confirm('Действительно хотите удалить всю марку?')"><button type="button"class="btn btn-danger btn-large">Удалить всю марку</button></a>
 					</div>
 				</div>
 			</div>
