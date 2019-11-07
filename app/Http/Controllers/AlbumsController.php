@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Support\MessageBag;
+use Illuminate\Http\Request;
 use Validator;
 use App\Album;
-use Request;
 use DB;
 
 class AlbumsController extends Controller
@@ -22,13 +21,6 @@ class AlbumsController extends Controller
 		$albums = Album::with('Photos')->get();
 		return view('album', ['album'=>$album, 'albums'=>$albums]);
   }
-	
-	//public function search(Request $request)
-	//{
-	//		$query = Request::input('search');
-	//		$albums = DB::table('albums')->where('name', 'LIKE', '%' . $query . '%')->paginate(10);
-	//		return view('index', compact('albums', 'query'));
-	//}
 
   public function getForm()
   {
@@ -37,7 +29,6 @@ class AlbumsController extends Controller
 
   public function postCreate(Request $request)
   {
-
       $rules = ['name' => 'required', 'cover_image'=>'required|image'];
 
       $input = ['name' => null];
@@ -65,9 +56,7 @@ class AlbumsController extends Controller
 	public function getDelete($id)
 	{
 		$album = Album::find($id);
-
 		$album->delete();
-
-		return Redirect::route('index');
+		return redirect()->route('index');
 	}
 }
