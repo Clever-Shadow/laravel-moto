@@ -49,7 +49,7 @@
 				<div class="col-9">
 				{!! Form::open(array('rout' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
 					<div class="col-8">
-						{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Поиск по марке мотоциклов...')) !!}
+						{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Я ищу...')) !!}
 					</div>
 					<div class="col-2">
 						{!! Form::submit('Поиск / Обновить',array('class'=>'btn btn-default')) !!}
