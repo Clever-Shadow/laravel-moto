@@ -47,7 +47,10 @@
 		<div class="container">
 			<div class="row">
 				{!! Form::open(array('rout' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
-					<div class="col-11">
+					<div class="col-1">
+						{!! Form::submit('Обновить',array('class'=>'btn btn-default')) !!}
+					</div>
+					<div class="col-10">
 						{!! Form::text('search', null,array('class'=>'form-control','placeholder'=>'Поиск по марке мотоциклов...')) !!}
 					</div>
 					<div class="col">
