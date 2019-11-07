@@ -8,14 +8,12 @@
 
 		<title>Moto</title>
 
-		<!-- Fonts -->
 		<link rel="dns-prefetch" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 		<link href="css/menu.css" rel="stylesheet" type="text/css">
 		<link href="css/galery.css" rel="stylesheet" type="text/css">
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
 
-		<!-- Styles -->
 		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	</head>
 	<body>
@@ -52,12 +50,10 @@
 									<fieldset>
 										<legend>Добавить марку мотоциклов</legend>
 										<div class="form-group">
-										  <!-- <label for="name">Марка</label> -->
-										  <input name="name" type="text" class="form-control"placeholder="Марка" value="{{old('name')}}">
+										  <input name="name" type="text" class="form-control" placeholder="Марка" value="{{old('name')}}" required>
 										</div>
 										<div class="form-group">
-										  <!-- <label for="description">Красткое описание</label> -->
-										  <textarea name="description" type="text"class="form-control" placeholder="Красткое описание" style="resize: none;">{{old('descrption')}}</textarea>
+										  <textarea name="description" type="text"class="form-control" placeholder="Краткое описание" style="resize: none;" required>{{old('descrption')}}</textarea>
 										</div>
 										<div class="form-group">
 										  <label for="cover_image">Выберите заставку марки</label>
@@ -67,7 +63,7 @@
 									</fieldset>
 								</form>
 							</div>
-						</div> <!-- /container -->
+						</div>
 					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 					<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
 					</div>
