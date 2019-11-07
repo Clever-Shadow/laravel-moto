@@ -61,7 +61,7 @@
 								@foreach($albums as $album)
 										<div class="col-lg-3" id="$album">
 											<div class="thumbnail" style="height: 514px;">
-											<img alt="{{$album->name}}" src="/albums/{{$album->cover_image}}">
+											<img alt="{{$album->name}}" src="albums/{{$album->cover_image}}">
 												<div class="caption">
 													<h3 style="position: absolute; bottom:240px;">{{$album->name}}</h3></br>
 													<p style="position: absolute; top:300px;">{{$album->description}}</p></br></br>

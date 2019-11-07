@@ -8,8 +8,8 @@
         <title>Moto</title>
 
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-		<link href="/css/menu.css" rel="stylesheet" type="text/css">
-		<link href="/css/galery.css" rel="stylesheet" type="text/css">
+		<link href="../css/menu.css" rel="stylesheet" type="text/css">
+		<link href="../css/galery.css" rel="stylesheet" type="text/css">
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
 		<style>
@@ -38,7 +38,7 @@
 	<div class="container">
 		<div class="starter-template">
 			<div class="media">
-				<img class="media-object pull-left"alt="{{$album->name}}" src="/albums/{{$album->cover_image}}" width="350px">
+				<img class="media-object pull-left"alt="{{$album->name}}" src="../albums/{{$album->cover_image}}" width="350px">
 				<div class="media-body">
 					<h2 class="media-heading" style="font-size: 26px;">Марка мотоциклов : {{$album->name}}</h2>
 					<p>{{$album->name}} - {{$album->description}}</p>
@@ -82,7 +82,7 @@
 	<div class="container">
 		<div class="starter-template">
 			<div class="media">
-				<img class="media-object pull-left"alt="{{$album->name}}" src="/albums/{{$album->cover_image}}" width="350px">
+				<img class="media-object pull-left"alt="{{$album->name}}" src="../albums/{{$album->cover_image}}" width="350px">
 				<div class="media-body">
 					<h2 class="media-heading" style="font-size: 26px;">Марка мотоциклов : {{$album->name}}</h2>
 					<p>{{$album->name}} - {{$album->description}}</p>
