@@ -11,7 +11,7 @@
 
 Так выглядят связи в БД:
 
-![](https://drive.google.com/uc?export=view&id=16BaQOdnnREZcR0LT5MeyWwkxLDQPK9qR)
+![](https://user-images.githubusercontent.com/32138653/68507108-349b1380-027c-11ea-9191-d15561a3b2c0.png)
 
 В данном проекте у пользователей есть возможности и функции, такие как:
 
